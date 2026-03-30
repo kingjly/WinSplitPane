@@ -130,7 +130,6 @@ WinSplitPane/
 │   ├── install.ps1           # 构建 + 配置
 │   ├── install-shortcut.ps1  # 创建桌面快捷方式
 │   ├── selfcheck-wezterm.ps1 # 自检脚本
-│   ├── e2e-smoke.ps1         # 端到端测试
 │   └── make-release.ps1      # 打包发布
 ├── .tools/wezterm/           # WezTerm portable（可选）
 │   └── portable.wezterm.lua  # 便携配置

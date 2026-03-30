@@ -115,7 +115,6 @@ WinSplitPane/
 │   ├── install.ps1
 │   ├── install-shortcut.ps1
 │   ├── selfcheck-wezterm.ps1
-│   ├── e2e-smoke.ps1
 │   └── make-release.ps1
 ├── .tools/wezterm/
 │   └── portable.wezterm.lua

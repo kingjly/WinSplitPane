@@ -73,14 +73,6 @@ To run a non-interactive validation, use:
 
 That script launches a temporary WezTerm pane, runs `tmux.exe doctor` from inside the pane, and stores the captured output under `.tmp/`.
 
-To run a real pane lifecycle smoke test, use:
-
-```powershell
-./scripts/e2e-smoke.ps1
-```
-
-That script launches a temporary WezTerm pane if needed, then verifies the actual shim flow of `list-panes` → `split-window` → `list-panes` → `kill-pane` → `list-panes`. The captured output is written under `.tmp/real-smoke/`.
-
 ## Current command coverage
 
 - `split-window`
@@ -98,6 +90,5 @@ That script launches a temporary WezTerm pane if needed, then verifies the actua
 
 - Pane ids are surfaced in tmux style such as `%12`, while WezTerm is called with raw numeric ids.
 - `split-window` now uses `WEZTERM_PANE` as the default target when `-t` is omitted, matching normal WezTerm pane-local usage.
-- `scripts/e2e-smoke.ps1` is the quickest way to verify that pane-local split/list/kill behavior is working end to end.
 - v1 stores lightweight pane metadata and reconstructs live pane state from `wezterm cli list`.
 - Commands such as `select-layout` are treated as no-op success for compatibility.
