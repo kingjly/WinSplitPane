@@ -1,0 +1,16 @@
+# Build output
+.bin/
+.tmp/
+
+# WezTerm portable binary (too large for git, user downloads separately)
+.tools/wezterm/WezTerm-windows-*/
+.tools/downloads/*.zip
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
