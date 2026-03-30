@@ -114,8 +114,7 @@ WinSplitPane/
 │   ├── start-wezterm.ps1
 │   ├── install.ps1
 │   ├── install-shortcut.ps1
-│   ├── selfcheck-wezterm.ps1
-│   └── make-release.ps1
+│   └── (install / start scripts)
 ├── .tools/wezterm/
 │   └── portable.wezterm.lua
 ├── setup.cmd
@@ -158,7 +157,6 @@ WinSplitPane/
 ### System checks
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\scripts\selfcheck-wezterm.ps1
 .\.bin\tmux.exe doctor
 ```
 
@@ -178,18 +176,6 @@ Make sure Git Bash is installed. Claude Code often sends bash-style commands to 
 
 **WezTerm cannot be found**
 Install WezTerm, or place a portable build under `.tools\wezterm\`.
-
----
-
-## Releases
-
-```powershell
-powershell -ExecutionPolicy Bypass -File .\scripts\make-release.ps1
-powershell -ExecutionPolicy Bypass -File .\scripts\make-release.ps1 -IncludeWezTerm
-```
-
-The standard package is intended for users who already have WezTerm installed.  
-The full package bundles portable WezTerm for a more self-contained setup.
 
 ---
 

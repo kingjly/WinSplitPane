@@ -63,16 +63,6 @@ This opens a WezTerm window with `TMUX`, `WEZTERM_CLI`, `WEZTERM_CONFIG_FILE` an
 
 If you don't want the extra manual step, use `start-claude.cmd` or `./scripts/start-claude.ps1` instead.
 
-## Validation
-
-To run a non-interactive validation, use:
-
-```powershell
-./scripts/selfcheck-wezterm.ps1
-```
-
-That script launches a temporary WezTerm pane, runs `tmux.exe doctor` from inside the pane, and stores the captured output under `.tmp/`.
-
 ## Current command coverage
 
 - `split-window`

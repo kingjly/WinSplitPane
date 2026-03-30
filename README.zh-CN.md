@@ -129,8 +129,7 @@ WinSplitPane/
 │   ├── start-wezterm.ps1     # 启动 WezTerm（设置环境变量）
 │   ├── install.ps1           # 构建 + 配置
 │   ├── install-shortcut.ps1  # 创建桌面快捷方式
-│   ├── selfcheck-wezterm.ps1 # 自检脚本
-│   └── make-release.ps1      # 打包发布
+│   └── (install / start scripts)
 ├── .tools/wezterm/           # WezTerm portable（可选）
 │   └── portable.wezterm.lua  # 便携配置
 ├── setup.cmd                 # 一键安装
@@ -173,9 +172,6 @@ WinSplitPane/
 ### 检查系统状态
 
 ```powershell
-# 运行自检
-powershell -ExecutionPolicy Bypass -File .\scripts\selfcheck-wezterm.ps1
-
 # 查看诊断信息
 .\.bin\tmux.exe doctor
 ```
@@ -196,20 +192,6 @@ Get-Content "$env:APPDATA\WinSplitPane\logs\tmux-shim.log"
 
 **Q: WezTerm 没有找到**
 → 下载 [WezTerm](https://wezfurlong.org/wezterm/) 到 `.tools\wezterm\` 目录下，或安装到系统 PATH 中。
-
----
-
-## 📦 制作 Release
-
-```powershell
-# 普通 release（不含 WezTerm 二进制，约 5MB）
-powershell -ExecutionPolicy Bypass -File .\scripts\make-release.ps1
-
-# 包含 WezTerm portable（约 200MB）
-powershell -ExecutionPolicy Bypass -File .\scripts\make-release.ps1 -IncludeWezTerm
-```
-
-生成的 ZIP 在 `dist/` 目录下。
 
 ---
 
