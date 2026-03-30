@@ -90,12 +90,22 @@ go build -o .\.bin\tmux.exe .\cmd\tmux
 
 ## 🎮 使用方法
 
-### 启动 Claude
+### 从项目目录启动
 
 双击桌面上的 **"Claude (WinSplitPane)"** 快捷方式，或运行：
 
 ```powershell
 .\start-claude.cmd
+```
+
+### 右键菜单打开（任意文件夹）
+
+运行 `install-context-menu.cmd`（或在 `setup.cmd` 安装时选择 **Y**），之后在任意文件夹空白处右键或右键文件夹本身，即可看到 **"Open Claude (WinSplitPane) here"** 选项。
+
+卸载右键菜单：
+
+```powershell
+.\install-context-menu.cmd Uninstall
 ```
 
 ### 创建 Agent Team
@@ -129,12 +139,14 @@ WinSplitPane/
 │   ├── start-wezterm.ps1     # 启动 WezTerm（设置环境变量）
 │   ├── install.ps1           # 构建 + 配置
 │   ├── install-shortcut.ps1  # 创建桌面快捷方式
+│   ├── install-context-menu.ps1  # 右键菜单集成
 │   └── (install / start scripts)
 ├── .tools/wezterm/           # WezTerm portable（可选）
 │   └── portable.wezterm.lua  # 便携配置
 ├── setup.cmd                 # 一键安装
 ├── start-claude.cmd          # 双击启动 Claude
 ├── install-shortcut.cmd      # 双击安装快捷方式
+├── install-context-menu.cmd  # 双击安装右键菜单
 └── docs/setup-windows.md     # 详细文档
 ```
 

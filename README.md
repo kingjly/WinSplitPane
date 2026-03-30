@@ -85,11 +85,23 @@ If WezTerm is not bundled, install WezTerm normally or extract a portable build 
 
 ## Usage
 
-Launch Claude Code through the prepared entry point:
+### Launch from the project directory
 
 ```powershell
 .\start-claude.cmd
 ```
+
+### Right-click context menu (any folder)
+
+After running `install-context-menu.cmd` (or choosing **Y** during `setup.cmd`), you can right-click in any folder or on any folder and select **"Open Claude (WinSplitPane) here"**.
+
+To remove the context menu later:
+
+```powershell
+.\install-context-menu.cmd Uninstall
+```
+
+### How it works
 
 Inside Claude Code, use Agent Teams as usual. WinSplitPane will:
 1. expose a tmux-compatible environment
@@ -114,12 +126,14 @@ WinSplitPane/
 │   ├── start-wezterm.ps1
 │   ├── install.ps1
 │   ├── install-shortcut.ps1
+│   ├── install-context-menu.ps1
 │   └── (install / start scripts)
 ├── .tools/wezterm/
 │   └── portable.wezterm.lua
 ├── setup.cmd
 ├── start-claude.cmd
 ├── install-shortcut.cmd
+├── install-context-menu.cmd
 └── docs/setup-windows.md
 ```
 

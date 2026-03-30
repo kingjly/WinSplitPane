@@ -43,6 +43,22 @@ install-shortcut.cmd
 
 That creates `Claude (WinSplitPane).lnk` on your desktop.
 
+## Context menu integration
+
+To add a right-click entry in any folder (similar to "Open in Terminal"):
+
+```cmd
+install-context-menu.cmd
+```
+
+This registers **"Open Claude (WinSplitPane) here"** in the Windows Explorer context menu for both folder backgrounds and folder items. The entry uses `HKCU` (current user only, no admin required).
+
+To remove the entry later:
+
+```cmd
+install-context-menu.cmd Uninstall
+```
+
 ## Shell setup
 
 Add `.bin` to `PATH`, then launch Claude Code from a shell that contains:

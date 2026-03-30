@@ -99,9 +99,19 @@ echo ║    1. Double-click desktop shortcut                      ║
 echo ║       "Claude (WinSplitPane)"                            ║
 echo ║    2. Or run: start-claude.cmd                           ║
 echo ║                                                          ║
-echo ║  In Claude, create an Agent Team task. Split panes       ║
+echo ║  In Claude, use Agent Teams as usual. Split panes       ║
 echo ║  will appear in the WezTerm window!                      ║
 echo ║                                                          ║
 echo ╚══════════════════════════════════════════════════════════╝
 echo.
+
+::  ---------- Optional: Context Menu ----------
+set /p "ADD_CONTEXT=Add right-click context menu entry? (y/N): "
+if /i "!ADD_CONTEXT!"=="y" (
+    echo.
+    echo Installing context menu...
+    powershell -ExecutionPolicy Bypass -File "%~dp0scripts\install-context-menu.ps1" -Action Install
+    echo.
+)
+
 pause
